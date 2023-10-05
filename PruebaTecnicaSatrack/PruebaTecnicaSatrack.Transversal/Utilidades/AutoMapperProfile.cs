@@ -22,12 +22,12 @@ namespace PruebaTecnicaSatrack.Transversal.Utilidades
                 .ForMember(destino => destino.CategoriaTarea, opt => opt.MapFrom(origen => origen.CategoriaTareaNavigation))
                 .ForMember(destino => destino.EstadoTarea, opt => opt.MapFrom(origen => origen.EstadoTareaNavigation))
                 .ForMember(destino => destino.IdCategoria, opt => opt.MapFrom(origen => origen.CategoriaTarea))
-                .ForMember(destino => destino.IdEstadoTarea, opt => opt.MapFrom(origen => origen.EstadoTarea))
+                .ForMember(destino => destino.IdEstado, opt => opt.MapFrom(origen => origen.EstadoTarea))
                 ;
 
             CreateMap<TareaPeticion, Tarea>()
                 .ForMember(destino => destino.TituloTarea, opt => opt.MapFrom(origen => origen.TituloTarea))
-                .ForMember(destino => destino.EstadoTarea, opt => opt.MapFrom(origen => origen.Estado))
+                .ForMember(destino => destino.EstadoTarea, opt => opt.MapFrom(origen => origen.idEstado))
                 .ForMember(destino => destino.CategoriaTarea, opt => opt.MapFrom(origen => origen.idCategoria))
                 .ForMember(destino => destino.DescripcionTarea, opt => opt.MapFrom(origen => origen.descripcionTarea))                
                 ;

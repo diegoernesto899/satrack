@@ -19,7 +19,7 @@ namespace PruebaTecnicaSatrack.Transversal.Objetos.Tarea
 
         public int idCategoria { get; set; }
         
-        public int Estado { get; set; }
+        public int idEstado { get; set; }
         
     }
 }

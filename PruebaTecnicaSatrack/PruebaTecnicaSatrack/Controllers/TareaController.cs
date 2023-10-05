@@ -12,13 +12,13 @@ namespace PruebaTecnicaSatrack.Controllers
     {
         private readonly ILogger<TareaController> _logger;
         private readonly ITareasNegocio _tareasNegocio;
-        
+
         public TareaController(ILogger<TareaController> logger, ITareasNegocio tareasNegocio)
         {
             _tareasNegocio = tareasNegocio;
             _logger = logger;
         }
-        [HttpGet("ObtenerTareas")]        
+        [HttpGet("ObtenerTareas")]
         public async Task<IActionResult> ObtenerTareas()
         {
             try
@@ -35,8 +35,9 @@ namespace PruebaTecnicaSatrack.Controllers
                 throw ex;
             }
         }
-        [HttpPost("AgregarTarea")]        
-        public async Task<IActionResult> AgregarTarea(TareaPeticion tarea) {
+        [HttpPost("AgregarTarea")]
+        public async Task<IActionResult> AgregarTarea(TareaPeticion tarea)
+        {
             try
             {
                 await _tareasNegocio.AgregarTarea(tarea);
@@ -47,7 +48,7 @@ namespace PruebaTecnicaSatrack.Controllers
             {
                 _logger.LogError(ex.ToString());
                 return Problem(
-                    detail:ex.Message                    
+                    detail: ex.Message
                     );
             }
         }
@@ -57,9 +58,9 @@ namespace PruebaTecnicaSatrack.Controllers
         {
             try
             {
-                if (!await _tareasNegocio.ActualizarTarea(tarea)) 
+                if (!await _tareasNegocio.ActualizarTarea(tarea))
                 {
-                    return NotFound(string.Format("La tarea {0} no existe",tarea.TituloTarea));
+                    return NotFound(string.Format("La tarea {0} no existe", tarea.TituloTarea));
                 }
 
                 return Ok();
@@ -75,7 +76,7 @@ namespace PruebaTecnicaSatrack.Controllers
         [HttpDelete("EliminarTarea/{idTarea}")]
         public async Task<IActionResult> EliminarTarea(int idTarea)
         {
-            if(idTarea==0)
+            if (idTarea == 0)
                 return BadRequest("idTarea es requerido");
             try
             {
@@ -95,7 +96,7 @@ namespace PruebaTecnicaSatrack.Controllers
             }
         }
 
-        
+
         [HttpGet("ObtenerEstados")]
         public async Task<IActionResult> ObtenerEstadosTarea()
         {

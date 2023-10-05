@@ -42,8 +42,7 @@ namespace PruebaTecnicaSatrack.Negocio.Implementacion
                 return false;
             }
             var tareaDatos = _mapper.Map<Tarea>(tarea);
-            tareaDatos.FechaModificacion = DateTime.Now;
-            tareaDatos.EstadoTarea = 1;
+            tareaDatos.FechaModificacion = DateTime.Now;            
             return await _datos.ActualizarTarea(tareaDatos);
         }
 
