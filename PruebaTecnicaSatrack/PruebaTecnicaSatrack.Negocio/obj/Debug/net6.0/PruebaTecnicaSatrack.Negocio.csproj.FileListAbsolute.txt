@@ -1,0 +1,17 @@
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Negocio\bin\Debug\net6.0\PruebaTecnicaSatrack.Negocio.deps.json
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Negocio\bin\Debug\net6.0\PruebaTecnicaSatrack.Negocio.dll
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Negocio\bin\Debug\net6.0\PruebaTecnicaSatrack.Negocio.pdb
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Negocio\bin\Debug\net6.0\PruebaTecnicaSatrack.Datos.dll
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Negocio\bin\Debug\net6.0\PruebaTecnicaSatrack.Datos.pdb
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Negocio\obj\Debug\net6.0\PruebaTecnicaSatrack.Negocio.csproj.AssemblyReference.cache
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Negocio\obj\Debug\net6.0\PruebaTecnicaSatrack.Negocio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Negocio\obj\Debug\net6.0\PruebaTecnicaSatrack.Negocio.AssemblyInfoInputs.cache
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Negocio\obj\Debug\net6.0\PruebaTecnicaSatrack.Negocio.AssemblyInfo.cs
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Negocio\obj\Debug\net6.0\PruebaTecnicaSatrack.Negocio.csproj.CoreCompileInputs.cache
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Negocio\obj\Debug\net6.0\PruebaTecnicaSatrack.Negocio.csproj.CopyComplete
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Negocio\obj\Debug\net6.0\PruebaTecnicaSatrack.Negocio.dll
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Negocio\obj\Debug\net6.0\refint\PruebaTecnicaSatrack.Negocio.dll
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Negocio\obj\Debug\net6.0\PruebaTecnicaSatrack.Negocio.pdb
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Negocio\obj\Debug\net6.0\ref\PruebaTecnicaSatrack.Negocio.dll
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Negocio\bin\Debug\net6.0\PruebaTecnicaSatrack.Transversal.dll
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Negocio\bin\Debug\net6.0\PruebaTecnicaSatrack.Transversal.pdb

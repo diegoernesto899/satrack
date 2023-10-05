@@ -1,0 +1,15 @@
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Transversal\bin\Debug\net6.0\PruebaTecnicaSatrack.Transversal.deps.json
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Transversal\bin\Debug\net6.0\PruebaTecnicaSatrack.Transversal.dll
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Transversal\bin\Debug\net6.0\PruebaTecnicaSatrack.Transversal.pdb
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Transversal\bin\Debug\net6.0\PruebaTecnicaSatrack.Datos.dll
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Transversal\bin\Debug\net6.0\PruebaTecnicaSatrack.Datos.pdb
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Transversal\obj\Debug\net6.0\PruebaTecnicaSatrack.Transversal.csproj.AssemblyReference.cache
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Transversal\obj\Debug\net6.0\PruebaTecnicaSatrack.Transversal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Transversal\obj\Debug\net6.0\PruebaTecnicaSatrack.Transversal.AssemblyInfoInputs.cache
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Transversal\obj\Debug\net6.0\PruebaTecnicaSatrack.Transversal.AssemblyInfo.cs
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Transversal\obj\Debug\net6.0\PruebaTecnicaSatrack.Transversal.csproj.CoreCompileInputs.cache
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Transversal\obj\Debug\net6.0\PruebaTecnicaSatrack.Transversal.csproj.CopyComplete
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Transversal\obj\Debug\net6.0\PruebaTecnicaSatrack.Transversal.dll
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Transversal\obj\Debug\net6.0\refint\PruebaTecnicaSatrack.Transversal.dll
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Transversal\obj\Debug\net6.0\PruebaTecnicaSatrack.Transversal.pdb
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack.Transversal\obj\Debug\net6.0\ref\PruebaTecnicaSatrack.Transversal.dll
