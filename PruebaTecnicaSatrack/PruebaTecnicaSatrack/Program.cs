@@ -15,8 +15,10 @@ builder.Services.AddControllers();
 
 builder.Services.AddDbContext<SatrackContext>(options =>
 {
+    
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionStringSatrack"));
 });
+builder.Services.AddTransient<SatrackContext>();
 
 builder.Services.AddScoped<ITareasDatos, TareasDatos>();
 builder.Services.AddScoped<ITareasNegocio, TareasNegocio>();

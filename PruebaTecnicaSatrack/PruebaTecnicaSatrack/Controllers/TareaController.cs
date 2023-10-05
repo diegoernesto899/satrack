@@ -32,7 +32,10 @@ namespace PruebaTecnicaSatrack.Controllers
             }
             catch (Exception ex)
             {
-                throw ex;
+                _logger.LogError(ex.ToString());
+                return Problem(
+                     detail: ex.Message
+                     );
             }
         }
         [HttpPost("AgregarTarea")]
@@ -40,9 +43,16 @@ namespace PruebaTecnicaSatrack.Controllers
         {
             try
             {
-                await _tareasNegocio.AgregarTarea(tarea);
-
-                return Ok();
+                string validacionObjetoPeticionTarea = _tareasNegocio.ValidarObjeto(tarea);
+                if (string.IsNullOrEmpty(validacionObjetoPeticionTarea))
+                {
+                    await _tareasNegocio.AgregarTarea(tarea);
+                    return Ok();
+                }
+                else
+                {
+                    return BadRequest(validacionObjetoPeticionTarea);
+                }
             }
             catch (Exception ex)
             {

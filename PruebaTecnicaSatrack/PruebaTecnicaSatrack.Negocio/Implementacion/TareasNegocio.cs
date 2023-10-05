@@ -25,6 +25,18 @@ namespace PruebaTecnicaSatrack.Negocio.Implementacion
             _mapper = mapper;
         }
 
+        public string ValidarObjeto(TareaPeticion tarea) {
+            string ErrorPeticion = string.Empty;
+
+            if (string.IsNullOrEmpty(tarea.TituloTarea))
+                ErrorPeticion = string.Format("{0}-{1}", ErrorPeticion, "Titulo es requerido.");
+            if (tarea.idCategoria==0)
+                ErrorPeticion = string.Format("{0}-{1}", ErrorPeticion, "Categoria es requerido.");
+            if (tarea.idEstado==0)
+                ErrorPeticion = string.Format("{0}-{1}", ErrorPeticion, "Estado es requerido.");
+            return ErrorPeticion;
+        }
+
         public async Task<bool> AgregarTarea(TareaPeticion tarea)
         {
             var tareaDatos = _mapper.Map<Tarea>(tarea);

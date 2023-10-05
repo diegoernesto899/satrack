@@ -11,6 +11,7 @@ namespace PruebaTecnicaSatrack.Negocio.Interfaces
 {
     public interface ITareasNegocio
     {
+        string ValidarObjeto(TareaPeticion tarea);
         Task<bool> AgregarTarea(TareaPeticion tarea);
         Task<IEnumerable<TareaDTO>> ObtenerTodasLasTareas();
         Task<TareaDTO> ObtenerTareaPorId(int idTarea);
