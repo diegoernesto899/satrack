@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Newtonsoft.Json;
+using PruebaTecnicaSatrack.Datos.Implementacion;
 using PruebaTecnicaSatrack.Datos.Interfaces;
 using PruebaTecnicaSatrack.Datos.Models;
 using PruebaTecnicaSatrack.Negocio.Interfaces;
@@ -67,6 +68,13 @@ namespace PruebaTecnicaSatrack.Negocio.Implementacion
             var listaDeTareas = await _datos.ObtenerTodasLasTareas();
             var resultado = _mapper.Map<IEnumerable<TareaDTO>>(listaDeTareas);
             return resultado;
+        }
+
+        public async Task<List<EstadoDTO>> ObtenerEstados()
+        {
+            var listaEstados = await _datos.ObtenerEstados();
+            var respuestaListaEstados = _mapper.Map<List<EstadoDTO>>(listaEstados);
+            return respuestaListaEstados;
         }
     }
 }

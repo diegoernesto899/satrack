@@ -14,5 +14,6 @@ namespace PruebaTecnicaSatrack.Datos.Interfaces
         Task<Tarea> ObtenerTareaPorId(int idTarea);
         Task<bool> ActualizarTarea(Tarea tarea);
         bool EliminarTarea(int idTarea);
+        Task<List<Estado>> ObtenerEstados();
     }
 }

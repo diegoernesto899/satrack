@@ -20,7 +20,9 @@ namespace PruebaTecnicaSatrack.Transversal.Utilidades
 
             CreateMap<Tarea, TareaDTO>()
                 .ForMember(destino => destino.CategoriaTarea, opt => opt.MapFrom(origen => origen.CategoriaTareaNavigation))
+                .ForMember(destino => destino.EstadoTarea, opt => opt.MapFrom(origen => origen.EstadoTareaNavigation))
                 .ForMember(destino => destino.IdCategoria, opt => opt.MapFrom(origen => origen.CategoriaTarea))
+                .ForMember(destino => destino.IdEstadoTarea, opt => opt.MapFrom(origen => origen.EstadoTarea))
                 ;
 
             CreateMap<TareaPeticion, Tarea>()
@@ -45,6 +47,13 @@ namespace PruebaTecnicaSatrack.Transversal.Utilidades
 
             #endregion
 
+            #region Estado
+
+            CreateMap<Estado, EstadoDTO>()
+                .ForMember(destino => destino.Id, opt => opt.MapFrom(origen => origen.IdEstado))
+                .ForMember(destino => destino.Nombre, opt => opt.MapFrom(origen => origen.NombreEstado))
+                ;
+            #endregion
         }
     }
 }

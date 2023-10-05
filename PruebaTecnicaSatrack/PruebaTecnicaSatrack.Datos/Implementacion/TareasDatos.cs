@@ -79,12 +79,17 @@ namespace PruebaTecnicaSatrack.Datos.Implementacion
         {
             try
             {
-                return await _context.Tareas.Include(c=>c.CategoriaTareaNavigation).ToListAsync();
+                return await _context.Tareas.Include(c=>c.CategoriaTareaNavigation).Include(e=>e.EstadoTareaNavigation).ToListAsync();
             }
             catch (Exception ex)
             {
                 throw ex;
             }
+        }
+
+        public Task<List<Estado>> ObtenerEstados()
+        {
+            return _context.Estados.ToListAsync();
         }
     }
 }

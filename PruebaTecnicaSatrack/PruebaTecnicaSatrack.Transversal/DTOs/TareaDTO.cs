@@ -15,9 +15,10 @@ namespace PruebaTecnicaSatrack.Transversal.DTOs
         public string? DescripcionTarea { get; set; }
         public DateTime? FechaCreacion { get; set; }
         public DateTime? FechaFinalizacion { get; set; }
-        public int? EstadoTarea { get; set; }
+        public int? IdEstadoTarea { get; set; }
         public int IdCategoria { get; set; }
-        
+        public  Estado? EstadoTarea{ get; set; }
+
         public Categoria? CategoriaTarea { get; set; }
     }
 }

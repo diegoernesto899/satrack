@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PruebaTecnicaSatrack.Negocio.Implementacion;
 using PruebaTecnicaSatrack.Negocio.Interfaces;
 
 using PruebaTecnicaSatrack.Transversal.Objetos.Tarea;
@@ -91,6 +92,26 @@ namespace PruebaTecnicaSatrack.Controllers
                 return Problem(
                     detail: ex.Message
                     );
+            }
+        }
+
+        
+        [HttpGet("ObtenerEstados")]
+        public async Task<IActionResult> ObtenerEstadosTarea()
+        {
+            try
+            {
+                var resultado = await _tareasNegocio.ObtenerEstados();
+                if (!resultado.Any())
+                {
+                    return NotFound("No se encontraron estados.");
+                }
+                return Ok(resultado);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                throw ex;
             }
         }
 
