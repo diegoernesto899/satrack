@@ -1,0 +1,41 @@
+--CREATE DATABASE SATRACK;
+USE SATRACK
+
+
+
+CREATE TABLE ESTADO (
+    ID_Estado int IDENTITY(1,1) PRIMARY KEY,
+    Nombre_Estado NVARCHAR(50) 
+);
+
+CREATE TABLE CATEGORIA (
+ID_Categoria INT IDENTITY(1,1) PRIMARY KEY,
+Nombre_Categoria NVARCHAR(50)
+);
+
+
+CREATE TABLE TAREA (
+ID_Tarea INT IDENTITY(1,1) PRIMARY KEY,
+Titulo_Tarea NVARCHAR(100) not null, 
+Descripcion_Tarea text, 
+Fecha_Creacion DATE,
+Fecha_Finalizacion DATE,
+Fecha_Modificacion DATE,
+Categoria_Tarea INT FOREIGN KEY REFERENCES CATEGORIA(ID_Categoria),
+Estado_Tarea INT FOREIGN KEY REFERENCES ESTADO(ID_Estado)
+);
+
+
+--Insersión de datos en la tabla ESTADO
+INSERT INTO ESTADO VALUES ('Nueva');
+INSERT INTO ESTADO VALUES ('Activa');
+INSERT INTO ESTADO VALUES ('Bloqueada');
+INSERT INTO ESTADO VALUES ('Cerrada');
+
+--Insersión de datos en la tabla CATEGORIA
+INSERT INTO CATEGORIA VALUES ('INCIDENTE');
+INSERT INTO CATEGORIA VALUES ('NUEVA FUNCIONALIDAD');
+
+
+
+
