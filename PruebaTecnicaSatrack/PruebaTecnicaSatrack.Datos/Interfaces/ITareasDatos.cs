@@ -13,6 +13,6 @@ namespace PruebaTecnicaSatrack.Datos.Interfaces
         Task<IEnumerable<Tarea>> ObtenerTodasLasTareas();
         Task<Tarea> ObtenerTareaPorId(int idTarea);
         Task<bool> ActualizarTarea(Tarea tarea);
-        Task<bool> EliminarTarea(int idTarea);
+        bool EliminarTarea(int idTarea);
     }
 }

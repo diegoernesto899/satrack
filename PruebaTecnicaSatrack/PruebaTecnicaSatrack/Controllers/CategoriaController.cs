@@ -17,7 +17,7 @@ namespace PruebaTecnicaSatrack.Controllers
         }
 
         // GET: CategoriaController/ObtenerCategorias
-        [HttpGet]        
+        [HttpGet("ObtenerCategorias")]
         public async Task<IActionResult> ObtenerCategorias()
         {
             try

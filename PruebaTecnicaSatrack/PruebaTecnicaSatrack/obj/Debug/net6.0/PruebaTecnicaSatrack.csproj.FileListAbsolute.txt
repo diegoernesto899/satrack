@@ -93,3 +93,4 @@ C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack\bin\Debug\net6.0\
 C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack\bin\Debug\net6.0\PruebaTecnicaSatrack.Transversal.dll
 C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack\bin\Debug\net6.0\PruebaTecnicaSatrack.Transversal.pdb
 C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack\obj\Debug\net6.0\PruebaTecnicaSatrack.MvcApplicationPartsAssemblyInfo.cs
+C:\Proyectos\satrack\PruebaTecnicaSatrack\PruebaTecnicaSatrack\bin\Debug\net6.0\Newtonsoft.Json.dll

@@ -11,13 +11,14 @@ namespace PruebaTecnicaSatrack.Transversal.Objetos.Tarea
     {
 
         public int IdTarea { get; set; }
-        public string? Titulo { get; set; }
+        public string? TituloTarea { get; set; }
 
-        public string? Descripcion { get; set; }        
+        public string? descripcionTarea { get; set; }        
 
-        public DateTime? FechaFinalizacion { get; set; }
+        public DateTime? fechaFinalizacion { get; set; }
 
-        public int Categoria { get; set; }
+        public int idCategoria { get; set; }
+        
         public int Estado { get; set; }
         
     }

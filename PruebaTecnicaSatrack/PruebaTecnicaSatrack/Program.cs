@@ -6,12 +6,13 @@ using PruebaTecnicaSatrack.Datos.Models;
 using PruebaTecnicaSatrack.Negocio.Implementacion;
 using PruebaTecnicaSatrack.Negocio.Interfaces;
 using PruebaTecnicaSatrack.Transversal.Utilidades;
-
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
+
 builder.Services.AddDbContext<SatrackContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionStringSatrack"));
@@ -33,8 +34,11 @@ builder.Services.AddCors(
         app.AllowAnyOrigin()
         .AllowAnyHeader()
         .AllowAnyMethod()
-        )    
+        )
     );
+
+builder.Services.AddControllers().AddJsonOptions(x =>
+                x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
 
 var app = builder.Build();
@@ -45,7 +49,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors("NuevaPolitica");
 app.UseAuthorization();
 
 app.MapControllers();

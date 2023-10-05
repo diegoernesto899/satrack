@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PBoZF+TiZITbsIL/ShnR2/xwJzWkyyqTNlKzeARRQP3gk1cpCU97qz/vvsIog0tLRXV+mgGloSdVCQUNGUgRlg==",
+  "dgSpecHash": "5pJaU8+dWx1qxqYWbh4NqcEqBCP/RZsIPQS+4lVdqRV8phoIv791RWtR8PCbHodbtIeXQvlfwTlL1oG6rlM+bg==",
   "success": true,
   "projectFilePath": "C:\\Proyectos\\satrack\\PruebaTecnicaSatrack\\PruebaTecnicaSatrack\\PruebaTecnicaSatrack.csproj",
   "expectedPackageFiles": [
@@ -44,6 +44,7 @@
     "C:\\Users\\Diego\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\Diego\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Diego\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\Diego\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Diego\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "C:\\Users\\Diego\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\Diego\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",

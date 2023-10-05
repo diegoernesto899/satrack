@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PruebaTecnicaSatrack.Negocio.Interfaces;
-using PruebaTecnicaSatrack.Transversal.Objetos.ObjetosError;
+
 using PruebaTecnicaSatrack.Transversal.Objetos.Tarea;
 
 namespace PruebaTecnicaSatrack.Controllers
@@ -17,13 +17,13 @@ namespace PruebaTecnicaSatrack.Controllers
             _tareasNegocio = tareasNegocio;
             _logger = logger;
         }
-        [HttpGet]        
+        [HttpGet("ObtenerTareas")]        
         public async Task<IActionResult> ObtenerTareas()
         {
             try
             {
                 var resultado = await _tareasNegocio.ObtenerTodasLasTareas();
-                if (resultado.Any())
+                if (!resultado.Any())
                 {
                     return NotFound("No se encontraron tareas.");
                 }
@@ -34,13 +34,13 @@ namespace PruebaTecnicaSatrack.Controllers
                 throw ex;
             }
         }
-        [HttpPost]        
+        [HttpPost("AgregarTarea")]        
         public async Task<IActionResult> AgregarTarea(TareaPeticion tarea) {
             try
             {
                 await _tareasNegocio.AgregarTarea(tarea);
 
-                return Ok("Tarea agregada correctamente.");
+                return Ok();
             }
             catch (Exception ex)
             {
@@ -50,6 +50,51 @@ namespace PruebaTecnicaSatrack.Controllers
                     );
             }
         }
-       
+
+        [HttpPut("ActualizarTarea")]
+        public async Task<IActionResult> ActualizarTarea(TareaPeticion tarea)
+        {
+            try
+            {
+                if (!await _tareasNegocio.ActualizarTarea(tarea)) 
+                {
+                    return NotFound(string.Format("La tarea {0} no existe",tarea.TituloTarea));
+                }
+
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.ToString());
+                return Problem(
+                    detail: ex.Message
+                    );
+            }
+        }
+        [HttpDelete("EliminarTarea/{idTarea}")]
+        public async Task<IActionResult> EliminarTarea(int idTarea)
+        {
+            if(idTarea==0)
+                return BadRequest("idTarea es requerido");
+            try
+            {
+                if (!await _tareasNegocio.EliminarTarea(idTarea))
+                {
+                    return NotFound(string.Format("No existe la tarea."));
+                }
+
+                return Ok("Tarea eliminada correctamente.");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.ToString());
+                return Problem(
+                    detail: ex.Message
+                    );
+            }
+        }
+
+
+
     }
 }

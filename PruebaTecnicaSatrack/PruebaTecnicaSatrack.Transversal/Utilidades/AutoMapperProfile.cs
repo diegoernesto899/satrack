@@ -18,13 +18,16 @@ namespace PruebaTecnicaSatrack.Transversal.Utilidades
 
             #region Tarea
 
-            CreateMap<Tarea, TareaDTO>().ReverseMap();
+            CreateMap<Tarea, TareaDTO>()
+                .ForMember(destino => destino.CategoriaTarea, opt => opt.MapFrom(origen => origen.CategoriaTareaNavigation))
+                .ForMember(destino => destino.IdCategoria, opt => opt.MapFrom(origen => origen.CategoriaTarea))
+                ;
 
             CreateMap<TareaPeticion, Tarea>()
-                .ForMember(destino => destino.TituloTarea, opt => opt.MapFrom(origen => origen.Titulo))
+                .ForMember(destino => destino.TituloTarea, opt => opt.MapFrom(origen => origen.TituloTarea))
                 .ForMember(destino => destino.EstadoTarea, opt => opt.MapFrom(origen => origen.Estado))
-                .ForMember(destino => destino.CategoriaTarea, opt => opt.MapFrom(origen => origen.Categoria))
-                .ForMember(destino => destino.DescripcionTarea, opt => opt.MapFrom(origen => origen.Descripcion))                
+                .ForMember(destino => destino.CategoriaTarea, opt => opt.MapFrom(origen => origen.idCategoria))
+                .ForMember(destino => destino.DescripcionTarea, opt => opt.MapFrom(origen => origen.descripcionTarea))                
                 ;
             #endregion
 

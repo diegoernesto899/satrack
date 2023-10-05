@@ -23,8 +23,7 @@ namespace PruebaTecnicaSatrack.Datos.Implementacion
             {
                 _context.Add(tarea);
                 await _context.SaveChangesAsync();
-                return true;
-                //return _context.Tareas.Single(l => (l.TituloTarea == tarea.TituloTarea) && (l.FechaCreacion == tarea.FechaCreacion));
+                return true;                
             }
             catch (Exception ex)
             {
@@ -46,13 +45,14 @@ namespace PruebaTecnicaSatrack.Datos.Implementacion
             }
         }
 
-        public async Task<bool> EliminarTarea(int idTarea)
+        public bool EliminarTarea(int idTarea)
         {
             bool response = false;
             try
             {
-                _context.Remove(idTarea);
-                await _context.SaveChangesAsync();
+                var tarea = new Tarea { IdTarea = idTarea };
+                _context.Remove(tarea);
+                _context.SaveChangesAsync();
                 response = true;
                 return response;
             }
@@ -79,7 +79,7 @@ namespace PruebaTecnicaSatrack.Datos.Implementacion
         {
             try
             {
-                return await _context.Tareas.ToListAsync();
+                return await _context.Tareas.Include(c=>c.CategoriaTareaNavigation).ToListAsync();
             }
             catch (Exception ex)
             {

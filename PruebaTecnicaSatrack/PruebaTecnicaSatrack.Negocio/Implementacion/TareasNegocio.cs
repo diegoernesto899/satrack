@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Newtonsoft.Json;
 using PruebaTecnicaSatrack.Datos.Interfaces;
 using PruebaTecnicaSatrack.Datos.Models;
 using PruebaTecnicaSatrack.Negocio.Interfaces;
@@ -27,8 +28,8 @@ namespace PruebaTecnicaSatrack.Negocio.Implementacion
         {
             var tareaDatos = _mapper.Map<Tarea>(tarea);
             tareaDatos.FechaCreacion = DateTime.Now;
-
-            return await _datos.AgregarTarea(tareaDatos); 
+            tareaDatos.EstadoTarea = 1;
+            return await _datos.AgregarTarea(tareaDatos);
         }
 
         public async Task<bool> ActualizarTarea(TareaPeticion tarea)
@@ -40,36 +41,32 @@ namespace PruebaTecnicaSatrack.Negocio.Implementacion
                 return false;
             }
             var tareaDatos = _mapper.Map<Tarea>(tarea);
-            tareaDatos.FechaCreacion = DateTime.Now;
-
+            tareaDatos.FechaModificacion = DateTime.Now;
+            tareaDatos.EstadoTarea = 1;
             return await _datos.ActualizarTarea(tareaDatos);
         }
 
         public async Task<bool> EliminarTarea(int idTarea)
-        {
-            var existeTarea = _datos.ObtenerTareaPorId(idTarea);
+        {            
+             _datos.EliminarTarea(idTarea);
+            return true;
 
-            if (existeTarea == null)
-            {
-                return false;
-            }
-            else
-            {
-                await _datos.EliminarTarea(idTarea);
-                return true;
-            }
         }
 
         public async Task<TareaDTO> ObtenerTareaPorId(int idTarea)
         {
-            //return await _datos.ObtenerTareaPorId(idTarea);
-            return null;
+            var tareaConsultada = await _datos.ObtenerTareaPorId(idTarea);
+            var resultado = _mapper.Map<TareaDTO>(tareaConsultada);
+            return resultado;
+
+
         }
 
         public async Task<IEnumerable<TareaDTO>> ObtenerTodasLasTareas()
         {
-            //return await _datos.ObtenerTodasLasTareas();
-            return null;
+            var listaDeTareas = await _datos.ObtenerTodasLasTareas();
+            var resultado = _mapper.Map<IEnumerable<TareaDTO>>(listaDeTareas);
+            return resultado;
         }
     }
 }
