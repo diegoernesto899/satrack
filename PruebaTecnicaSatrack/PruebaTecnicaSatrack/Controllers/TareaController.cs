@@ -83,7 +83,7 @@ namespace PruebaTecnicaSatrack.Controllers
                     return NotFound(string.Format("No existe la tarea."));
                 }
 
-                return Ok("Tarea eliminada correctamente.");
+                return Ok();
             }
             catch (Exception ex)
             {
